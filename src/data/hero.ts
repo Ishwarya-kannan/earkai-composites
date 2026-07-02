@@ -1,14 +1,12 @@
-export const heroData = {
-  badge: "Earkai Composites",
+export const hero = {
+  title: "Advanced Composite Materials & Engineering Solutions",
 
-  title: "High Quality Composite Manufacturing Solutions",
+  subtitle:
+    "Earkai Composites supplies high-quality composite raw materials, consumables, vacuum bagging products, RTM solutions, spray equipment and technical support for modern industries.",
 
-  description:
-    "Delivering innovative, durable and eco-friendly composite products for various industrial applications.",
+  button1: "Explore Products",
 
-  primaryButton: "Our Products",
+  button2: "Contact Us",
 
-  secondaryButton: "Contact Us",
-
-  image: "/images/hero/hero-banner.jpg",
+  image: "/images/hero/hero.jpg",
 };

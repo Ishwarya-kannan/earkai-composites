@@ -1,76 +1,56 @@
-import { Product } from "@/types/product";
-
-export const products: Product[] = [
+export const productCategories = [
   {
     id: 1,
     title: "Composite Raw Materials",
     slug: "composite-raw-materials",
     image: "/images/products/carbon-fiber.jpeg",
-    shortDescription:
-      "Premium composite raw materials for industrial manufacturing.",
-    category: "Raw Materials",
   },
   {
     id: 2,
     title: "Composite Consumables",
     slug: "composite-consumables",
     image: "/images/products/epoxy-resin.jpeg",
-    shortDescription:
-      "Consumables designed for high-quality composite production.",
-    category: "Consumables",
   },
   {
     id: 3,
     title: "Vacuum Bagging Products",
     slug: "vacuum-bagging-products",
     image: "/images/products/sealant-tape.jpeg",
-    shortDescription:
-      "Vacuum bagging materials for precision composite processing.",
-    category: "Vacuum",
   },
   {
     id: 4,
     title: "Silicone Bagging",
     slug: "silicone-bagging",
     image: "/images/products/composite-sheet.jpeg",
-    shortDescription:
-      "Reusable silicone bagging systems for advanced manufacturing.",
-    category: "Silicone",
   },
   {
     id: 5,
     title: "RTM Products",
     slug: "rtm-products",
     image: "/images/products/composite-fibers.jpeg",
-    shortDescription:
-      "Products supporting resin transfer moulding processes.",
-    category: "RTM",
   },
   {
     id: 6,
     title: "Spray Up Equipment",
     slug: "spray-up-equipment",
     image: "/images/products/fiberglass-roll.jpeg",
-    shortDescription:
-      "Industrial spray equipment for composite fabrication.",
-    category: "Equipment",
   },
   {
     id: 7,
     title: "Gelcoat Products",
     slug: "gelcoat-products",
     image: "/images/products/gelcoat.jpeg",
-    shortDescription:
-      "Protective gelcoat products for superior surface finish.",
-    category: "Surface",
   },
   {
     id: 8,
     title: "Testing Equipment",
     slug: "testing-equipment",
     image: "/images/products/carbon-fabric-roll.jpeg",
-    shortDescription:
-      "Testing solutions for quality assurance and inspection.",
-    category: "Testing",
+  },
+  {
+    id: 9,
+    title: "Composite Machinery",
+    slug: "composite-machinery",
+    image: "/images/machinery/machine-1.jpeg",
   },
 ];

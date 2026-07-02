@@ -5,18 +5,14 @@ export const navigation = [
   },
   {
     name: "About",
-    href: "#about",
+    href: "/about",
   },
   {
     name: "Products",
-    href: "#products",
-  },
-  {
-    name: "Industries",
-    href: "#industries",
+    href: "/products",
   },
   {
     name: "Contact",
-    href: "#contact",
+    href: "/contact",
   },
 ];

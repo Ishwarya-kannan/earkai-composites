@@ -1,61 +1,95 @@
 import Image from "next/image";
+import { about } from "@/data/about";
 
 export default function About() {
   return (
-    <section id="about" className="bg-white py-20">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2">
+    <section className="bg-white py-24">
+      <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
+
+        {/* Left Image */}
+
         <div>
           <Image
-            src="/images/hero/hero.jpeg"
-            alt="Composite Manufacturing"
-            width={600}
-            height={450}
-            className="rounded-2xl shadow-lg object-cover"
+            src="/images/about/about.jpg"
+            alt="About Earkai Composites"
+            width={700}
+            height={600}
+            className="rounded-3xl shadow-xl"
           />
         </div>
 
+        {/* Right Content */}
+
         <div>
-          <span className="text-sm font-semibold uppercase tracking-widest text-green-700">
-            About Earkai Composites
+
+          <span className="rounded-full bg-green-100 px-4 py-2 text-sm font-medium text-green-700">
+            About Us
           </span>
 
-          <h2 className="mt-4 text-4xl font-bold text-gray-900">
-            Composite Solutions for Multiple Industries
+          <h2 className="mt-6 text-5xl font-bold text-gray-900">
+            {about.title}
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Earkai Composites provides composite raw materials,
-            consumables, machinery and technical solutions for
-            industries that demand quality, durability and
-            innovation.
+            {about.subtitle}
           </p>
 
-          <p className="mt-4 text-lg leading-8 text-gray-600">
-            Our focus is to deliver reliable products backed by
-            technical expertise and customer support while helping
-            industries adopt advanced composite technologies.
+          <p className="mt-6 leading-8 text-gray-600">
+            {about.description1}
           </p>
 
-          <div className="mt-8 grid grid-cols-2 gap-4">
-            <div className="rounded-xl bg-green-50 p-5">
-              <h3 className="text-3xl font-bold text-green-700">
-                10+
+          <p className="mt-6 leading-8 text-gray-600">
+            {about.description2}
+          </p>
+
+          {/* Stats */}
+
+          <div className="mt-12 grid grid-cols-2 gap-6">
+
+            <div className="rounded-xl bg-green-50 p-6 text-center">
+              <h3 className="text-4xl font-bold text-green-700">
+                {about.experience}
               </h3>
-              <p className="text-gray-600">
-                Product Categories
+
+              <p className="mt-2 text-gray-600">
+                {about.experienceLabel}
               </p>
             </div>
 
-            <div className="rounded-xl bg-green-50 p-5">
-              <h3 className="text-3xl font-bold text-green-700">
-                Quality
+            <div className="rounded-xl bg-green-50 p-6 text-center">
+              <h3 className="text-4xl font-bold text-green-700">
+                {about.products}
               </h3>
-              <p className="text-gray-600">
-                Assured Materials
+
+              <p className="mt-2 text-gray-600">
+                {about.productsLabel}
               </p>
             </div>
+
+            <div className="rounded-xl bg-green-50 p-6 text-center">
+              <h3 className="text-4xl font-bold text-green-700">
+                {about.clients}
+              </h3>
+
+              <p className="mt-2 text-gray-600">
+                {about.clientsLabel}
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-green-50 p-6 text-center">
+              <h3 className="text-4xl font-bold text-green-700">
+                {about.support}
+              </h3>
+
+              <p className="mt-2 text-gray-600">
+                {about.supportLabel}
+              </p>
+            </div>
+
           </div>
+
         </div>
+
       </div>
     </section>
   );

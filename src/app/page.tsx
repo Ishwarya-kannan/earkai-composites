@@ -7,6 +7,7 @@ import WhyChooseUs from "@/components/home/WhyChooseUs";
 import ContactSection from "@/components/home/ContactSection";
 import Footer from "@/components/layout/Footer";
 import FeaturedProducts from "@/components/home/FeaturedProducts";
+import Clients from "@/components/home/Clients";
 
 export default function Home() {
   return (
@@ -22,6 +23,8 @@ export default function Home() {
         <WhyChooseUs />
         <ContactSection />
         <Footer />
+        <Clients />
+
       </main>
     </>
   );

@@ -7,7 +7,7 @@ export const products: Product[] = [
     slug: "composite-raw-materials",
     image: "/images/products/carbon-fiber.jpeg",
     shortDescription:
-      "Premium composite raw materials for industrial manufacturing.",
+      "Premium raw materials for manufacturing high-performance composite products.",
     category: "Raw Materials",
   },
   {
@@ -16,7 +16,7 @@ export const products: Product[] = [
     slug: "composite-consumables",
     image: "/images/products/epoxy-resin.jpeg",
     shortDescription:
-      "Consumables designed for high-quality composite production.",
+      "Complete range of consumables used in composite manufacturing processes.",
     category: "Consumables",
   },
   {
@@ -25,52 +25,16 @@ export const products: Product[] = [
     slug: "vacuum-bagging-products",
     image: "/images/products/sealant-tape.jpeg",
     shortDescription:
-      "Vacuum bagging materials for precision composite processing.",
+      "Vacuum bagging materials for precision composite production.",
     category: "Vacuum",
   },
   {
     id: 4,
-    title: "Silicone Bagging",
-    slug: "silicone-bagging",
-    image: "/images/products/composite-sheet.jpeg",
-    shortDescription:
-      "Reusable silicone bagging systems for advanced manufacturing.",
-    category: "Silicone",
-  },
-  {
-    id: 5,
     title: "RTM Products",
     slug: "rtm-products",
-    image: "/images/products/composite-fibers.jpeg",
+    image: "/images/products/composite-sheet.jpeg",
     shortDescription:
-      "Products supporting resin transfer moulding processes.",
+      "Reliable products for Resin Transfer Moulding applications.",
     category: "RTM",
-  },
-  {
-    id: 6,
-    title: "Spray Up Equipment",
-    slug: "spray-up-equipment",
-    image: "/images/products/fiberglass-roll.jpeg",
-    shortDescription:
-      "Industrial spray equipment for composite fabrication.",
-    category: "Equipment",
-  },
-  {
-    id: 7,
-    title: "Gelcoat Products",
-    slug: "gelcoat-products",
-    image: "/images/products/gelcoat.jpeg",
-    shortDescription:
-      "Protective gelcoat products for superior surface finish.",
-    category: "Surface",
-  },
-  {
-    id: 8,
-    title: "Testing Equipment",
-    slug: "testing-equipment",
-    image: "/images/products/carbon-fabric-roll.jpeg",
-    shortDescription:
-      "Testing solutions for quality assurance and inspection.",
-    category: "Testing",
   },
 ];

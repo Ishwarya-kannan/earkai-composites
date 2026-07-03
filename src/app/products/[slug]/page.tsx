@@ -21,15 +21,26 @@ export default async function ProductDetails({ params }: Props) {
     notFound();
   }
 
+  const relatedProducts = products
+    .filter((item) => item.slug !== product.slug)
+    .slice(0, 3);
+
   return (
     <>
       <Navbar />
 
       <main className="min-h-screen bg-gray-50">
+
         {/* Hero */}
         <section className="bg-green-700 py-20 text-white">
           <div className="mx-auto max-w-7xl px-6">
-            <h1 className="text-5xl font-bold">{product.title}</h1>
+            <span className="rounded-full bg-white/20 px-4 py-2 text-sm">
+              {product.category}
+            </span>
+
+            <h1 className="mt-6 text-5xl font-bold">
+              {product.title}
+            </h1>
 
             <p className="mt-5 max-w-3xl text-lg">
               {product.shortDescription}
@@ -37,28 +48,22 @@ export default async function ProductDetails({ params }: Props) {
           </div>
         </section>
 
-        {/* Product Details */}
+        {/* Product */}
         <section className="py-20">
-          <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2">
-            {/* Image */}
-            <div>
-              <Image
-                src={product.image}
-                alt={product.title}
-                width={700}
-                height={500}
-                className="w-full rounded-2xl shadow-lg object-cover"
-              />
-            </div>
+          <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
 
-            {/* Details */}
-            <div>
-              <span className="inline-block rounded-full bg-green-100 px-4 py-2 text-sm font-semibold text-green-700">
-                {product.category}
-              </span>
+            <Image
+              src={product.image}
+              alt={product.title}
+              width={700}
+              height={550}
+              className="w-full rounded-3xl object-cover shadow-xl"
+            />
 
-              <h2 className="mt-5 text-4xl font-bold text-gray-900">
-                {product.title}
+            <div>
+
+              <h2 className="text-4xl font-bold text-gray-900">
+                Product Overview
               </h2>
 
               <p className="mt-6 leading-8 text-gray-600">
@@ -66,71 +71,116 @@ export default async function ProductDetails({ params }: Props) {
               </p>
 
               <p className="mt-6 leading-8 text-gray-600">
-                Earkai Composites offers high-quality composite products
-                engineered for reliability, durability and performance.
-                Our solutions support industries such as automotive,
-                aerospace, marine, wind energy and industrial
-                manufacturing.
+                Earkai Composites supplies reliable composite materials
+                and engineering solutions for industrial manufacturing.
+                Our products are selected to deliver durability,
+                efficiency and consistent performance across various
+                applications.
               </p>
 
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="rounded-lg bg-green-700 px-8 py-3 font-medium text-white transition hover:bg-green-800"
+                  className="rounded-lg bg-green-700 px-8 py-3 text-white hover:bg-green-800"
                 >
-                  Contact Us
+                  Request a Quote
                 </Link>
 
                 <Link
                   href="/products"
-                  className="rounded-lg border border-green-700 px-8 py-3 font-medium text-green-700 transition hover:bg-green-50"
+                  className="rounded-lg border border-green-700 px-8 py-3 text-green-700 hover:bg-green-50"
                 >
-                  ← Back to Products
+                  Back to Products
                 </Link>
               </div>
+
             </div>
+
+          </div>
+        </section>
+
+        {/* Features & Applications */}
+        <section className="bg-white py-20">
+          <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-2">
+
+            <div>
+              <h2 className="mb-8 text-3xl font-bold">
+                Key Features
+              </h2>
+
+              <ul className="space-y-4">
+                {product.features.map((feature) => (
+                  <li
+                    key={feature}
+                    className="rounded-lg border bg-gray-50 p-4"
+                  >
+                    ✅ {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h2 className="mb-8 text-3xl font-bold">
+                Applications
+              </h2>
+
+              <ul className="space-y-4">
+                {product.applications.map((application) => (
+                  <li
+                    key={application}
+                    className="rounded-lg border bg-gray-50 p-4"
+                  >
+                    🚀 {application}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
           </div>
         </section>
 
         {/* Related Products */}
-        <section className="bg-white py-20">
+        <section className="py-20">
           <div className="mx-auto max-w-7xl px-6">
-            <h2 className="mb-10 text-3xl font-bold text-center">
+
+            <h2 className="mb-10 text-center text-4xl font-bold">
               Related Products
             </h2>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-              {products
-                .filter((item) => item.slug !== product.slug)
-                .slice(0, 4)
-                .map((item) => (
-                  <Link
-                    key={item.id}
-                    href={`/products/${item.slug}`}
-                    className="overflow-hidden rounded-2xl bg-gray-50 shadow transition hover:-translate-y-2 hover:shadow-xl"
-                  >
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      width={400}
-                      height={250}
-                      className="h-48 w-full object-cover"
-                    />
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
-                    <div className="p-5">
-                      <h3 className="font-semibold text-green-700">
-                        {item.title}
-                      </h3>
+              {relatedProducts.map((item) => (
+                <Link
+                  key={item.id}
+                  href={`/products/${item.slug}`}
+                  className="overflow-hidden rounded-2xl bg-white shadow transition hover:-translate-y-2 hover:shadow-xl"
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={500}
+                    height={350}
+                    className="h-56 w-full object-cover"
+                  />
 
-                      <p className="mt-2 text-sm text-gray-600">
-                        {item.shortDescription}
-                      </p>
-                    </div>
-                  </Link>
-                ))}
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-green-700">
+                      {item.title}
+                    </h3>
+
+                    <p className="mt-3 text-gray-600">
+                      {item.shortDescription}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+
             </div>
+
           </div>
         </section>
+
       </main>
 
       <Footer />

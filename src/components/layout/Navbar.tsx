@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+
 import { navigation } from "@/data/navigation";
 
 export default function Navbar() {
@@ -50,9 +50,12 @@ export default function Navbar() {
 
         {/* Desktop Button */}
         <div className="hidden md:block">
-          <Button className="bg-green-700 hover:bg-green-800">
-            Get Quote
-          </Button>
+        <Link
+  href="/contact"
+  className="rounded-lg bg-green-700 px-5 py-2.5 text-white transition hover:bg-green-800"
+>
+  Get Quote
+</Link>
         </div>
 
         {/* Mobile Menu */}
@@ -79,9 +82,13 @@ export default function Navbar() {
               </Link>
             ))}
 
-            <Button className="mt-4 bg-green-700 hover:bg-green-800">
-              Get Quote
-            </Button>
+          <Link
+  href="/contact"
+  onClick={() => setOpen(false)}
+  className="mt-4 rounded-lg bg-green-700 px-5 py-3 text-center text-white transition hover:bg-green-800"
+>
+  Get Quote
+</Link>
           </nav>
         </div>
       )}

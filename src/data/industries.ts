@@ -1,26 +1,32 @@
 export const industries = [
   {
     title: "Automotive",
-    description: "Composite solutions for lightweight and high-performance automotive applications.",
+    description:
+      "Composite materials for lightweight, durable and high-performance automotive components.",
   },
   {
     title: "Marine",
-    description: "Materials and consumables for durable marine structures and components.",
+    description:
+      "Advanced composite solutions for boats, yachts, shipbuilding and marine structures.",
   },
   {
     title: "Wind Energy",
-    description: "Advanced composite products for renewable energy manufacturing.",
+    description:
+      "High-quality composite materials supporting wind turbine manufacturing and renewable energy projects.",
   },
   {
     title: "Construction",
-    description: "Reliable composite materials for modern infrastructure projects.",
+    description:
+      "Reliable composite products for modern infrastructure and construction applications.",
   },
   {
-    title: "Aerospace",
-    description: "High-performance materials engineered for aerospace applications.",
+    title: "Electrical & Electronics",
+    description:
+      "Composite insulation materials and engineered solutions for electrical applications.",
   },
   {
     title: "Industrial Manufacturing",
-    description: "Composite technologies supporting a wide range of industrial sectors.",
+    description:
+      "Complete composite manufacturing solutions including raw materials, consumables and machinery.",
   },
 ];

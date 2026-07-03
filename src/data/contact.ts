@@ -1,11 +1,13 @@
 export const contact = {
-  address: "Chennai, Tamil Nadu, India",
+  title: "Get in Touch",
+  subtitle:
+    "Contact Earkai Composites for product enquiries, technical support and business partnerships.",
 
-  phone: "+91 XXXXX XXXXX",
+  address: "no:2/2B1-5, AGARAMTHEN MAIN ROAD ,AGARAMTHEN, CHENNAI - 600126, TAMIL NADU, INDIA",
 
-  email: "info@earkaicomposites.com",
+  phone: "+91 9655422893",
 
-  website: "https://earkaicomposites.com",
+  email: "earkaicomposites@gmail.com",
 
-  workingHours: "Monday - Saturday : 9.00 AM - 6.00 PM",
+  workingHours: "Monday - Friday: 9:00 AM - 5:00 PM",
 };

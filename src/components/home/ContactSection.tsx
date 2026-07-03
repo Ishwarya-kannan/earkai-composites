@@ -1,51 +1,91 @@
 import { contact } from "@/data/contact";
-import { Card, CardContent } from "@/components/ui/card";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="bg-gray-100 py-20">
+    <section className="bg-green-700 py-24 text-white">
       <div className="mx-auto max-w-7xl px-6">
 
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-gray-900">
-            Contact Us
-          </h2>
+        <div className="mb-14 text-center">
+          <h2 className="text-5xl font-bold">{contact.title}</h2>
 
-          <p className="mt-4 text-gray-600">
-            Get in touch with our team for product enquiries and technical support.
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-green-100">
+            {contact.subtitle}
           </p>
         </div>
 
-        <Card className="mx-auto mt-12 max-w-3xl">
-          <CardContent className="space-y-6 p-8">
+        <div className="grid gap-8 md:grid-cols-2">
 
-            <div>
-              <h3 className="font-semibold text-green-700">Address</h3>
-              <p>{contact.address}</p>
+          <div className="rounded-2xl bg-white/10 p-8">
+            <h3 className="text-2xl font-bold">Contact Information</h3>
+
+            <div className="mt-8 space-y-5">
+
+              <p>
+                <strong>📍 Address:</strong><br />
+                {contact.address}
+              </p>
+
+              <p>
+                <strong>📞 Phone:</strong><br />
+                {contact.phone}
+              </p>
+
+              <p>
+                <strong>📧 Email:</strong><br />
+                {contact.email}
+              </p>
+
+              <p>
+                <strong>🕒 Working Hours:</strong><br />
+                {contact.workingHours}
+              </p>
+
             </div>
+          </div>
 
-            <div>
-              <h3 className="font-semibold text-green-700">Phone</h3>
-              <p>{contact.phone}</p>
-            </div>
+          <div className="rounded-2xl bg-white p-8 text-black shadow-xl">
 
-            <div>
-              <h3 className="font-semibold text-green-700">Email</h3>
-              <p>{contact.email}</p>
-            </div>
+            <h3 className="mb-6 text-2xl font-bold">
+              Send an Enquiry
+            </h3>
 
-            <div>
-              <h3 className="font-semibold text-green-700">Website</h3>
-              <p>{contact.website}</p>
-            </div>
+            <form className="space-y-5">
 
-            <div>
-              <h3 className="font-semibold text-green-700">Working Hours</h3>
-              <p>{contact.workingHours}</p>
-            </div>
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="w-full rounded-lg border p-3"
+              />
 
-          </CardContent>
-        </Card>
+              <input
+                type="email"
+                placeholder="Email Address"
+                className="w-full rounded-lg border p-3"
+              />
+
+              <input
+                type="text"
+                placeholder="Phone Number"
+                className="w-full rounded-lg border p-3"
+              />
+
+              <textarea
+                rows={5}
+                placeholder="Your Message"
+                className="w-full rounded-lg border p-3"
+              />
+
+              <button
+                className="rounded-lg bg-green-700 px-8 py-3 text-white hover:bg-green-800"
+              >
+                Send Message
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
 
       </div>
     </section>

@@ -6,15 +6,12 @@ export default function Clients() {
 
         <p className="mt-4 text-gray-600">
           We proudly serve customers across multiple industries with reliable
-          composite solutions.
+          composite solutions.We have worked with clients in various industries, including manufacturing, windmill , and Marine . Our customized supplies  solutions have helped our clients improve their operations and increase their productivity.
+
+CHECK with us and give your feedback .
         </p>
 
-        <div className="mt-10 grid grid-cols-2 gap-6 md:grid-cols-4">
-          <div className="rounded-xl border bg-white p-6">Client 1</div>
-          <div className="rounded-xl border bg-white p-6">Client 2</div>
-          <div className="rounded-xl border bg-white p-6">Client 3</div>
-          <div className="rounded-xl border bg-white p-6">Client 4</div>
-        </div>
+     
       </div>
     </section>
   );

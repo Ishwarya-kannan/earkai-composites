@@ -8,10 +8,11 @@ export default function Footer() {
         {/* Company */}
         <div>
           <h2 className="text-2xl font-bold text-white">
-            Earkai Composites
+            FRP COMPOSITES AND VARIOUS FRP RELEATED ITEMS
           </h2>
 
           <p className="mt-5 leading-7">
+
             Earkai Composites provides composite raw materials,
             consumables, machinery and engineering solutions for
             industries requiring quality, durability and innovation.
@@ -60,9 +61,10 @@ export default function Footer() {
           </h3>
 
           <div className="mt-5 space-y-3">
-            <p>📍 Chengalpattu, Tamil Nadu</p>
-            <p>📞 +91 XXXXX XXXXX</p>
-            <p>📧 info@earkaicomposites.com</p>
+            <p>📍 no:2/2B1-5, AGARAMTHEN MAIN ROAD ,AGARAMTHEN, CHENNAI - 600126, TAMIL NADU
+            </p>
+            <p>📞 +91 9655422893</p>
+            <p>📧 earkaicomposites@gmail.com</p>
           </div>
         </div>
 

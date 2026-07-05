@@ -234,13 +234,14 @@ export default function ContactPage() {
 
     <div className="overflow-hidden rounded-2xl shadow-lg">
 
-      <iframe
-        src="https://www.google.com/maps/dir//no:2%2F2B1-5,+AGARAMTHEN+MAIN+ROAD+,AGARAMTHEN,+CHENNAI+-+600126/@13.0383872,80.232448,10z?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D"
-        width="100%"
-        height="450"
-        loading="lazy"
-        style={{ border: 0 }}
-      ></iframe>
+    <iframe
+  src="https://www.google.com/maps?q=no:2/2B1-5,AGARAMTHEN+MAIN+ROAD,AGARAMTHEN,CHENNAI-600126&output=embed"
+  width="100%"
+  height="450"
+  style={{ border: 0 }}
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+></iframe>
 
     </div>
 
